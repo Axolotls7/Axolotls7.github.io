@@ -1,25 +1,8 @@
 h1 {text-align: center}
 body {background-color: SlateGray; color: SpringGreen}
-dropdown {
-  position: relative;
-  display: inline-block;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-}
-
-.d-content {
-  display: none;
-  position: absolute;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  padding: 12px 16px;
-  z-index: 1;
-}
-
-.dropdown:hover .d-content {
-  display: block;
-}
-ul {
+ul[name="menu"] {
   list-style-type: none;
   margin: 0;
   padding: 0;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
 }
