@@ -1,4 +1,5 @@
-body {background-color: SlateGray; text-align: center; color: SpringGreen}
+h1 {text-align: center}
+body {background-color: SlateGray; color: SpringGreen}
 dropdown {
   position: relative;
   display: inline-block;
