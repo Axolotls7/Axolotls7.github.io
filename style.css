@@ -1,8 +1,9 @@
 h1 {text-align: center}
-body {background-color: SlateGray; color: SpringGreen}
+body {background-color: #383838; color: GhostWhite}
 ul[name="menu"] {
   list-style-type: none;
   margin: 0;
   padding: 0;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  display: inline;
 }
