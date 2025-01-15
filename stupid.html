@@ -26,7 +26,7 @@
                 function slideRand() {
                     let x = Math.floor(Math.random() * 9999999999)
                     let y = slide(x,false)
-                    while (true)
+                    while (true) {
                         if(confirm("Is "+ y + " your phone number?")) {
                             alert("Nice.")
                             slide(x)
