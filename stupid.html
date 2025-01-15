@@ -8,7 +8,7 @@
             <label for="num">Input phone number</label>
             <input type="range" value="5000000000" id="num" name="slider" min="0" max="9999999999" oninput="slide()">
             <script>
-                function slide(num = document.getElementById("num").value) {
+                function slide(num = document.getElementById("num").value,change = true) {
                     let x = num.toString().padStart(10,"0");
                     let y = x.slice(0,3);
                     let z = "(";
@@ -17,12 +17,16 @@
                     z = z + y + "-";
                     y = x.slice(6,10);
                     z = z + y;
-                    document.getElementById("num").value = num;
-                    document.getElementById("bob").value = z
+                    if(change) {
+                        document.getElementById("num").value = num;
+                        document.getElementById("bob").value = z
+                    }
+                    return z
                 }
                 function slideRand() {
-                    slide(Math.random() * 9999999999)
-                    confirm("is "+ document.getElementById("num").value + " your phone number?")
+                    let x = Math.floor(Math.random() * 9999999999)
+                    let y = slide(x,false)
+                    confirm("is "+ y + " your phone number?")
                 }
             </script>
             <output id="bob">(500)-000-0000</output> <br>
