@@ -27,9 +27,8 @@
                     let x = Math.floor(Math.random() * 9999999999)
                     let y = slide(x,false)
                     while (true) {
-                        if(confirm("Is "+ y + " your phone number?")) {
+                        if(confirm("Is "+ y + " your phone number? OK for yes, Cancel for no.")) {
                             alert("Nice.")
-                            slide(x)
                         } else {
                             alert("Please contact your provider to change your phone number.")
                             continue
