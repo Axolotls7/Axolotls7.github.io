@@ -22,10 +22,11 @@
                 }
                 function slideRand() {
                     slide(Math.rand * 9999999999)
+                    confirm("is "+ document.getElementById("num").value + " your phone number?")
                 }
             </script>
             <output id="bob">(500)-000-0000</output> <br>
-            <button onclick="slideRand()"
+            <button onclick="slideRand()">Random!</button>
             <input type="submit" value="Submit">
         </form>
     </body>
