@@ -1,28 +1,32 @@
 <!DOCTYPE html>
 <html>
-<body>
-<h1>Bad phone slider</h1>
-  <p>This is a simple slider where you enter a phone number.</p>
-  <small>Don't enter your real phone number. I don't collect the data, and this is an https site, but still.</small>
-<form>
-  <label for="num">Input phone number</label>
-  <input type="range" value="5000000000" id="num" name="slider" min="0" max="9999999999" oninput="slide()">
-  <script>
-  	function slide() {
-    	let x = document.getElementById("num").value.toString().padStart(10,"0");
-        let y = x.slice(0,3)
-        let z = "("
-        z = z + y + ")-"
-        y = x.slice(3,6)
-        z = z + y + "-"
-        y = x.slice(6,10)
-        z = z + y
-        document.getElementById("bob").value = z
-    }
-  </script>
-  <output id="bob">(500)-000-0000</output>
-  <input type="submit" value="Submit">
-</form>
-
-</body>
+    <body>
+        <h1>Bad phone slider</h1>
+        <p>This is a simple slider where you enter a phone number.</p>
+        <small>Don't enter your real phone number. I don't collect the data, and this is an https site, but still.</small>
+        <form>
+            <label for="num">Input phone number</label>
+            <input type="range" value="5000000000" id="num" name="slider" min="0" max="9999999999" oninput="slide()">
+            <script>
+                function slide(num = document.getElementById("num").value) {
+                    let x = num.toString().padStart(10,"0");
+                    let y = x.slice(0,3);
+                    let z = "(";
+                    z = z + y + ")-";
+                    y = x.slice(3,6);
+                    z = z + y + "-";
+                    y = x.slice(6,10);
+                    z = z + y;
+                    document.getElementById("num").value = num;
+                    document.getElementById("bob").value = z
+                }
+                function slideRand() {
+                    slide(Math.rand * 9999999999)
+                }
+            </script>
+            <output id="bob">(500)-000-0000</output> <br>
+            <button onclick="slideRand()"
+            <input type="submit" value="Submit">
+        </form>
+    </body>
 </html>
