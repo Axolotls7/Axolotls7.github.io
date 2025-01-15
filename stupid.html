@@ -26,7 +26,14 @@
                 function slideRand() {
                     let x = Math.floor(Math.random() * 9999999999)
                     let y = slide(x,false)
-                    confirm("is "+ y + " your phone number?")
+                    while (true)
+                        if(confirm("Is "+ y + " your phone number?")) {
+                            alert("Okay.")
+                        } else {
+                            alert("Please contact your provider to change your phone number.")
+                            continue
+                        }
+                    break
                 }
             </script>
             <output id="bob">(500)-000-0000</output> <br>
