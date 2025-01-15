@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h1>Bad phone slider</h1>
+<form>
+  <label for="num">Input phone number</label>
+  <input type="range" value="5000000000" id="num" name="slider" min="0" max="9999999999" oninput="slide()">
+  <script>
+  	function slide() {
+    	let x = document.getElementById("num").value.toString().padStart(10,"0");
+        let y = x.slice(0,3)
+        let z = "("
+        z = z + y + ")-"
+        y = x.slice(3,6)
+        z = z + y + "-"
+        y = x.slice(6,10)
+        z = z + y
+        document.getElementById("bob").value = z
+    }
+  </script>
+  <output id="bob">(500)-000-0000</output>
+  <input type="submit" value="Submit">
+</form>
+
+</body>
+</html>
