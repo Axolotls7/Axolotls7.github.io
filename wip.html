@@ -2,16 +2,16 @@
 <html>
     <head>
         <title>Work In Progress</title>
+    </head>
+    <body>
+        <h1>Work in Progress</h1>
+        <p>The page you tried to visit is a nonfunctional work in progress. Please just enjoy the rest of the site in the meantime.</p>
+        <p id="deets"></p>
         <script>
             const url = new URL(document.URL)
             const params = url.searchParams
             const deetlst = {"update":"This page is being updated. Please wait.", "dev":"This page is being developed. Please wait.", "tran":"This page is being transferred from my other computer. Please wait."}
             document.getElementById("deets").textContent = deetlist[params.get("reason")]
         </script>
-    </head>
-    <body>
-        <h1>Work in Progress</h1>
-        <p>The page you tried to visit is a nonfunctional work in progress. Please just enjoy the rest of the site in the meantime.</p>
-        <p id="deets"></p>
     </body>
 </html>
