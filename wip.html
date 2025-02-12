@@ -10,7 +10,7 @@
         <script>
             const url = new URL(document.URL)
             const params = url.searchParams
-            const deetlst = {update:"This page is being updated. Please wait.", dev:"This page is being developed. Please wait.", tran:"This page is being transferred from my other computer. Please wait."}
+            const deetlist = {update:"This page is being updated. Please wait.", dev:"This page is being developed. Please wait.", tran:"This page is being transferred from my other computer. Please wait."}
             document.getElementById("deets").textContent = deetlist[params.get("reason")]
         </script>
     </body>
