@@ -1,1 +1,64 @@
-<meta http-equiv="refresh" content="1,url=axolotls7.github.io/wip.html?reason=tran">
+<!DOCTYPE html>
+    <html>
+        <head>
+            <title>Delivery</title>
+        </head>
+        <body>
+            <h1 style="display:inline;color:red"><em>Slice</em> of Heaven </h1><h1 style="display:inline;">Pizza Ordering Service!</h1>
+            <form action="ms.html">
+                <fieldset>
+                    <legend title="Hey you found this!">Pizza</legend>
+                    <fieldset>
+                        <legend>Basics</legend>
+                        <select name="size" oninput="add(parseFloat(this.value))">
+                            <option value="Mini">Miniscule $1.99</option>
+                            <option value="Tiny">Tiny $2.99</option>
+                            <option value="Smol">Small $3.99</option>
+                            <option value="Mid" selected>Medium $4.99</option>
+                            <option value="Beeg">Large $5.99</option>
+                            <option value="Huge">Huge $6.99</option>
+                            <option value="Garg">Gargantuan $7.99</option>
+                            <option value="Colo">Colossal $8.99</option>
+                        </select><br>
+                        <label for="che">Cheese: </label>
+                        <input id="che" name="che" type="checkbox" checked>
+                        <label for="sau">Sauce: </label>
+                        <input id="sau" name="sau" type="checkbox" checked>
+                    </fieldset>
+                    <fieldset>
+                        <legend>Toppings $1.99 each</legend>
+                        <label for="pep">Pepperoni: </label>
+                        <input id="pep" name="pep" type="checkbox" checked>
+                        <label for="bac">Bacon: </label>
+                        <input id="bac" name="bac" type="checkbox">
+                        <label for="cbac">Canadian Bacon: </label>
+                        <input id="cbac" name="cbac" type="checkbox">
+                        <label for="bal">Sausage: </label>
+                        <input id="bal" name="bal" type="checkbox">
+                        <label for="olv">Olives: </label>
+                        <input id="olv" name="olv" type="checkbox">
+                        <label for="msh">Mushrooms: </label>
+                        <input id="msh" name="msh" type="checkbox">
+                        <label for="pin">Pineapples:* </label>
+                        <input id="pin" name="pin" type="checkbox">
+                        <br><sub>*If you don't want pineapples, just don't add them. <em>Some</em> people do like them on pizza.</sub>
+                    </fieldset>
+                </fieldset>
+                <fieldset>
+                    <legend>Delivery</legend>
+                    
+                    <br><label for="N">Name (opt.): </label>
+                    <input id="N" name="FN">&nbsp&nbsp&nbsp<input id="N2" name="LN">
+                    <br><label for="A">Address: </label>
+                    <input id="A" name="A" required>
+                    <br><label for="T">Phone number (opt.): </label>
+                    <input type="tel" id="T" name="T">
+                    <br><label for="E">Email(opt.): </label>
+                    <input id="E" type="email" name="E">
+                    
+                    <br><button type="submit">Deliver!</button>
+                </fieldset>
+            </form>
+        </body>
+    </html> 
+
