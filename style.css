@@ -5,5 +5,5 @@ ul[name="menu"] {
   margin: 0;
   padding: 0;
 }
-a:link, a:visited {display: inline; color: GhostWhite; background-color: black}
+a:link, a:visited {display: inline; color: GhostWhite;}
 a:hover {color: crimson}
