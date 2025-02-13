@@ -1,1 +1,49 @@
 /*That is, newS Style, but condensed*/
+div.container {
+    margin-top: 1cm;
+    margin-bottom: 1cm;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-column-gap: 5%
+}
+div.article {
+    border-left: thick solid blue;
+    background-color: lightcyan;
+    grid-column: 1;
+    padding: 0cm 0.1cm 0.1cm 0.5cm;
+    text-align: center;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+div.post {
+    border-right: thick solid violet;
+    background-color: thistle;
+    grid-column: 2;
+    padding: 0cm 0.5cm 0.1cm 0.1cm;
+    text-align: center;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+img.photo+span.caption {
+    border: double;
+    border-top: none;
+}
+div.post span.author img {
+    border-radius: 1cm;
+    width: 1cm;
+}
+div.post span.author img+p {
+    display: inline;
+}
+div.ad {
+    border-right: thick solid yellow;
+    background-color: antiquewhite;
+    grid-column: 2;
+    padding: 0cm 0.5cm 0.1cm 0.1cm;
+    text-align: center;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+img.photo {
+    max-width: 50%;
+}
