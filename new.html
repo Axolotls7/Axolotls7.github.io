@@ -14,7 +14,7 @@
       Okay, will this work?
     </p>
     <button onclick="changePara()">Test</button>
-    <div onmousemove="screenUpdate(event)">
+    <div onmousemove="moveToMouse(event, this, 'circ')">
       <svg>
         <circle id="circ" r="50" fill="red" />
       </svg>
@@ -23,9 +23,9 @@
       function changePara() {
         document.getElementById("jsPara").textContent = "It worked!"
       }
-      function screenUpdate(e) {
-        document.getElementById("circ").setAttribute("cx", e.clientX.toString())
-        document.getElementById("circ").setAttribute("cy", e.clientY.toString())
+      function moveToMouse(ev, scrn, name) {
+        scrn.getElementById(name).setAttribute("cx", ev.offsetX.toString())
+        scrn.getElementById(name).setAttribute("cy", ev.offsetY.toString())
       }
     </script>
   </body>
