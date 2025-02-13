@@ -16,11 +16,9 @@
       Okay, will this work?
     </p>
     <button onclick="changePara()">Test</button>
-    <div onmousemove="moveToCursor(event, 'circ')">
-      <svg>
+      <svg onmousemove="moveToCursor(event, 'circ')">
         <circle id="circ" r="50" fill="red" />
       </svg>
-    </div>
     <script>
       function changePara() {
         document.getElementById("jsPara").textContent = "It worked!"
