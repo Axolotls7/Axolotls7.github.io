@@ -13,11 +13,12 @@
     <p id="jsPara">
       Okay, will this work?
     </p>
+    <button onclick="changePara()">Test</button>
     <div onmousemove="screenUpdate(event)">
       <svg>
         <circle id="circ" r="50" fill="red" />
       </svg>
-    <button onclick="changePara()">Test</button>
+    </div>
     <script>
       function changePara() {
         document.getElementById("jsPara").textContent = "It worked!"
