@@ -13,15 +13,16 @@
   <body>
     <h1>I am testing javascript here now!</h1>
     <p id="jsPara">
-      Okay, will this work?
+        Okay, will this work?
     </p>
     <button onclick="changePara()">Test</button>
-      <svg class="screen" onmousemove="moveToCursor(event, 'circ')">
+    <hr>
+    <svg class="screen" onmousemove="moveToCursor(event, 'circ')">
         <circle id="circ" r="50" fill="red" />
-      </svg>
+    </svg>
     <script>
-      function changePara() {
-        document.getElementById("jsPara").textContent = "It worked!"
-      }
+        function changePara() {
+            document.getElementById("jsPara").textContent = "It worked!"
+        }
     </script>
   </body>
