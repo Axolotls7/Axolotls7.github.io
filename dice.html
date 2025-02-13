@@ -6,10 +6,13 @@
             <input id="die" type="range" min="2" max="100" oninput="DR()" value="6"> <output id="dieNum">6</output>
             <button onclick="randf()">roll</button>
             <p>Your number is: </p><p id="num">NaN</p>
+            <output id="normal"></output>
             <script>
                 function randf() {
-                    var x = document.getElementById("die").value
-                    document.getElementById("num").textContent = ((Math.random() * (x - 1)) + 1).toString()
+                    var die = document.getElementById("die").value
+                    var norm = document.getElementById("normal")
+                    document.getElementById("num").textContent = ((Math.random() * (die - 1)) + 1).toString()
+                    norm.textContent = "Which is of course a perfectly normal number for a d" + die.toString() + " to roll."
                 }
                 function DR() {
                     document.getElementById("dieNum").textContent = document.getElementById("die").value    
