@@ -1,4 +1,5 @@
 svg.screen {
     background-color: white;
     display: block;
+    border: thin solid black;
 }
