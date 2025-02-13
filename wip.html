@@ -2,16 +2,29 @@
 <html>
     <head>
         <title>Work In Progress</title>
+        <style>
+            html {
+                background-color: blue;
+                color: white;
+                text-align: center;
+            }
+        </style>
     </head>
     <body>
-        <h1>Work in Progress</h1>
-        <p>The page you tried to visit is a nonfunctional work in progress. Please just enjoy the rest of the site in the meantime.</p>
-        <p id="deets"></p>
+        <pre>Axolotls7.github.io encountered an error.</pre>
+        <pre>Details:
+Error: WIPError page not complete
+Reason: <output id="deets"></output>
+</pre>
         <script>
             const url = new URL(document.URL)
             const params = url.searchParams
             const deetlist = {update:"This page is being updated. Please wait.", dev:"This page is being developed. Please wait.", tran:"This page is being transferred from my other computer. Please wait."}
-            document.getElementById("deets").textContent = deetlist[params.get("reason")]
+            if (deetlist.has("reason")) {
+                document.getElementById("deets").textContent = deetlist[params.get("reason")]
+            } else {
+                document.getElementById("deets").textContent = "Unknown"
+            }
         </script>
     </body>
 </html>
