@@ -8,11 +8,11 @@ function rope(ids, dist) {
     for (let x = 0;x < ids.length - 1; x++) {
         let y = document.getElementById(ids[x]);
         let z = document.getElementById(ids[x + 1]);
-        let xdif = z.getAttribute("cx") - y.getAttribute("cx");
-        let ydif = z.getAttribute("cy") - y.getAttribute("cy");
+        let xdif = parseFloat(z.getAttribute("cx")) - parseFloat(y.getAttribute("cx"));
+        let ydif = parseFloat(z.getAttribute("cy")) - parseFloat(y.getAttribute("cy"));
         let d = Math.hypot(xdif, ydif);
-        let nx = dist * (xdif / d) + y.getAttribute("cx");
-        let ny = dist * (ydif / d) + y.getAttribute("cy");
+        let nx = dist * (xdif / d) + parseFloat(y.getAttribute("cx"));
+        let ny = dist * (ydif / d) + parseFloat(y.getAttribute("cy"));
         z.setAttribute("cx", nx);
         z.setAttribute("cy", ny);
     }
