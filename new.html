@@ -1,36 +1,44 @@
 <!doctype HTML>
 <html>
     <head>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="screens/screens.css">
-    <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96">
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
-    <link rel="shortcut icon" href="/favicon.ico">
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-    <meta name="apple-mobile-web-app-title" content="X0lotl">
-    <link rel="manifest" href="/site.webmanifest">
-    <title>Js Tests</title>
-    <script src="screens/screens.js"></script>
-  </head>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="screens/screens.css">
+        <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96">
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+        <link rel="shortcut icon" href="/favicon.ico">
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+        <meta name="apple-mobile-web-app-title" content="X0lotl">
+        <link rel="manifest" href="/site.webmanifest">
+        <title>Js Tests</title>
+        <script src="screens/screens.js"></script>
+    </head>
   <body>
-    <h1>I am testing javascript here now!</h1>
-    <p id="jsPara">
-        Okay, will this work?
-    </p>
-    <button onclick="changePara()">Test</button>
-    <hr>
-    <svg class="screen" onmousemove="moveToCursor(event, 'circ1')">
-        <circle id="circ1" r="50" fill="red" />
-    </svg>
-    <hr>
-    <svg class="screen" onmousemove="moveToCursor(event, 'circ2');rope(['circ2','circ3'], 25)">
-        <circle id="circ2" cx="10" cy="10" r="50" fill="red" />
-        <circle id="circ3" r="50" cx="35" cy="10" fill="blue" />
-    </svg>
-    <script>
-        function changePara() {
-            document.getElementById("jsPara").textContent = "It worked!"
-        }
-    </script>
-  </body>
+      <h1>I am testing javascript here now!</h1>
+      <hr>
+      <h2>Paragraph editing</h2>
+      <p id="jsPara">
+          Okay, will this work?
+      </p>
+      <button onclick="changePara()">Test</button>
+      <hr>
+      <h2>Editing SVGs and mouse tracking</h2>
+      <p>I made a folder called <code>/screens/</code> where you can see all the SVG editing stuff I used.</p>
+      <svg class="screen" onmousemove="moveToCursor(event, 'circ0')">
+          <circle id="circ0" r="50" fill="red" />
+      </svg>
+      <hr>
+      <h2>Procedural Animation (PA) Part 1: Ropes</h2>
+      <p>In order to make procedural animation, I started by making a <code>ropes(ids, dist)</code> function, that would move elements in the list <code>ids</code> to be <code>dist</code> pixels apart. (It's in <code>screens/screens.js</code>)</p>
+      <svg class="screen" onmousemove="moveToCursor(event, 'rcirc3');rope(['rcirc3','rcirc2','rcirc1','rcirc0'], 5)">
+          <circle id="rcirc0" cx="10" cy="10" r="10" fill="red" />
+          <circle id="rcirc1" cx="10" cy="10" r="10" fill="blue" />
+          <circle id="rcirc2" cx="10" cy="10" r="10" fill="red" />
+          <circle id="rcirc3" cx="10" cy="10" r="10" fill="blue" />
+      </svg>
+      <script>
+          function changePara() {
+              document.getElementById("jsPara").textContent = "It worked!"
+          }
+      </script>
+    </body>
 </html>
