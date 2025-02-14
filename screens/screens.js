@@ -17,3 +17,11 @@ function rope(ids, dist) {
         z.setAttribute("cy", ny);
     }
 }
+function size(amount, id, clas, dims = ["r"]) {
+    let targets = document.getElementById(id).getElementsByClassName(clas);
+    for (let i = 0; i < targets.length; i++) {
+        for (let j = 0; j < dims.length; j++) {
+            targets.item(i).setAttribute(dims[j], amount);
+        }
+    }
+}
