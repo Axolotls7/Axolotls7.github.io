@@ -1,5 +1,6 @@
 <!doctype HTML>
-  <head>
+<html>
+    <head>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="screens/screens.css">
     <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96">
@@ -8,6 +9,7 @@
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <meta name="apple-mobile-web-app-title" content="X0lotl">
     <link rel="manifest" href="/site.webmanifest">
+    <title>Js Tests</title>
     <script src="screens/screens.js"></script>
   </head>
   <body>
@@ -17,8 +19,13 @@
     </p>
     <button onclick="changePara()">Test</button>
     <hr>
-    <svg class="screen" onmousemove="moveToCursor(event, 'circ')">
-        <circle id="circ" r="50" fill="red" />
+    <svg class="screen" onmousemove="moveToCursor(event, 'circ1')">
+        <circle id="circ1" r="50" fill="red" />
+    </svg>
+    <hr>
+    <svg class="screen" onmousemove="moveToCursor(event, 'circ2');rope(['circ2','circ3'], 25)">
+        <circle id="circ2" r="50" fill="red" />
+        <circle id="circ3" r="50" fill="blue" />
     </svg>
     <script>
         function changePara() {
@@ -26,3 +33,4 @@
         }
     </script>
   </body>
+</html>
