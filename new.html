@@ -37,8 +37,10 @@
           <circle id="rcirc2" class="rope" cx="10" cy="10" r="25" fill="red" />
           <circle id="rcirc3" class="rope" cx="10" cy="10" r="25" fill="blue" />
       </svg>
-      <input type="range" id="size" oninput="resize(this.value, 'PA1', 'rope')">
-      <input type="range" id="distance">
+      <label for="size">Size:</label>
+      <input type="range" value="25" id="size" oninput="resize(this.value, 'PA1', 'rope');">
+      <label for="distance">Distance:</label>
+      <input type="range" id="distance" min="1">
       <script>
           function changePara() {
               document.getElementById("jsPara").textContent = "It worked!"
