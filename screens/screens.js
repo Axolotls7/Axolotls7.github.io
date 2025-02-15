@@ -1,4 +1,4 @@
-function moveToCursor(event, id) {
+export function moveToCursor(event, id) {
     try {
         let x = event.offsetX;
         let y = event.offsetY;
@@ -8,7 +8,7 @@ function moveToCursor(event, id) {
         dbg(`ERROR: ${e}`);
     }
 }
-function rope(ids, dist) {
+export function rope(ids, dist) {
     try {
         for (let x = 0;x < ids.length - 1; x++) {
             let y = document.getElementById(ids[x]);
@@ -25,11 +25,11 @@ function rope(ids, dist) {
         dbg(`ERROR: ${e}`);
     }
 }
-function dbg(msg) {
+export function dbg(msg) {
     const d = document.getElementById('debug');
     d.innerHTML += msg + "<br>";
 }
-function resize(amount, id, clas, dims = ["r"]) {
+export function resize(amount, id, clas, dims = ["r"]) {
     try {
         let targets = document.getElementById(id).getElementsByClassName(clas);
         for (let i = 0; i < targets.length; i++) {
