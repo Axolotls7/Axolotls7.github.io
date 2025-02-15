@@ -27,6 +27,8 @@
           <circle id="circ0" r="50" fill="red" />
       </svg>
       <hr>
+      <div id="debug" style="white-space: pre;">
+      </div>
       <h2>Procedural Animation (PA) Part 1: Ropes</h2>
       <p>In order to make procedural animation, I started by making a <code>ropes(ids, dist)</code> function, that would move elements in the list <code>ids</code> to be <code>dist</code> pixels apart. (It's in <code>screens/screens.js</code>)</p>
       <svg class="screen" id="PA1" onmousemove="moveToCursor(event, 'rcirc3');rope(['rcirc3','rcirc2','rcirc1','rcirc0'], document.getElementById('distance').value)">
