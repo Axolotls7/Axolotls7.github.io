@@ -21,7 +21,7 @@ function dbg(msg) {
     const d = document.getElementById('debug');
     d.innerText += msg + "\n";
 }
-function size(amount, id, clas, dims = ["r"]) {
+function resize(amount, id, clas, dims = ["r"]) {
     try {
         let targets = document.getElementById(id).getElementsByClassName(clas);
         for (let i = 0; i < targets.length; i++) {
