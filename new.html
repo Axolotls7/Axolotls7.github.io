@@ -31,13 +31,13 @@
       </div>
       <h2>Procedural Animation (PA) Part 1: Ropes</h2>
       <p>In order to make procedural animation, I started by making a <code>ropes(ids, dist)</code> function, that would move elements in the list <code>ids</code> to be <code>dist</code> pixels apart. (It's in <code>screens/screens.js</code>)</p>
-      <svg class="screen" id="PA1" onmousemove="moveToCursor(event, 'rcirc3');rope(['rcirc3','rcirc2','rcirc1','rcirc0'], document.getElementById('distance').value)">
+      <svg class="screen" id="PA1" onmousemove="moveToCursor(event, 'rcirc3');rope(['rcirc3','rcirc2','rcirc1','rcirc0'], distance)">
           <circle id="rcirc0" class="rope" cx="10" cy="10" r="25" fill="red" />
           <circle id="rcirc1" class="rope" cx="10" cy="10" r="25" fill="blue" />
           <circle id="rcirc2" class="rope" cx="10" cy="10" r="25" fill="red" />
           <circle id="rcirc3" class="rope" cx="10" cy="10" r="25" fill="blue" />
       </svg>
-      <input type="range" id="size" oninput="size(this.value, 'PA1', 'rope')">
+      <input type="range" id="size" oninput="resize(this.value, 'PA1', 'rope')">
       <input type="range" id="distance">
       <script>
           function changePara() {
