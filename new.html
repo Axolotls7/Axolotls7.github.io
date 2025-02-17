@@ -10,6 +10,10 @@
         <meta name="apple-mobile-web-app-title" content="X0lotl">
         <link rel="manifest" href="/site.webmanifest">
         <title>Js Tests</title>
+        <script type="module">
+            import scrn from "./screens/screens.js"
+            window.scrn = scrn
+        </script>
     </head>
   <body>
       <h1>I am testing javascript here now!</h1>
@@ -40,9 +44,6 @@
       <input type="range" value="25" id="size" oninput="scrn.resize(this.value, 'PA1', 'rope');">
       <label for="distance">Distance:</label>
       <input type="range" id="distance" min="1">
-      <script type="module">
-          import * as scrn from "./screens/screens.js"
-      </script>
       <script>
           function changePara() {
               document.getElementById("jsPara").textContent = "It worked!"
