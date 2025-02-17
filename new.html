@@ -22,7 +22,7 @@
       <hr>
       <h2>Editing SVGs and mouse tracking</h2>
       <p>I made a folder called <code>/screens/</code> where you can see all the SVG editing stuff I used.</p>
-      <svg class="screen" onmousemove="moveToCursor(event, 'circ0')">
+      <svg class="screen" onmousemove="scrn.moveToCursor(event, 'circ0')">
           <circle id="circ0" r="50" fill="red" />
       </svg>
       <hr>
@@ -30,14 +30,14 @@
       </div>
       <h2>Procedural Animation (PA) Part 1: Ropes</h2>
       <p>In order to make procedural animation, I started by making a <code>ropes(ids, dist)</code> function, that would move elements in the list <code>ids</code> to be <code>dist</code> pixels apart. (It's in <code>screens/screens.js</code>)</p>
-      <svg class="screen" id="PA1" onmousemove="moveToCursor(event, 'rcirc3');rope(['rcirc3','rcirc2','rcirc1','rcirc0'], document.getElementById('distance').value)">
+      <svg class="screen" id="PA1" onmousemove="scrn.moveToCursor(event, 'rcirc3');scrn.rope(['rcirc3','rcirc2','rcirc1','rcirc0'], document.getElementById('distance').value)">
           <circle id="rcirc0" class="rope" cx="10" cy="10" r="25" fill="red" />
           <circle id="rcirc1" class="rope" cx="10" cy="10" r="25" fill="blue" />
           <circle id="rcirc2" class="rope" cx="10" cy="10" r="25" fill="red" />
           <circle id="rcirc3" class="rope" cx="10" cy="10" r="25" fill="blue" />
       </svg>
       <label for="size">Size:</label>
-      <input type="range" value="25" id="size" oninput="resize(this.value, 'PA1', 'rope');">
+      <input type="range" value="25" id="size" oninput="scrn.resize(this.value, 'PA1', 'rope');">
       <label for="distance">Distance:</label>
       <input type="range" id="distance" min="1">
       <script type="module">
