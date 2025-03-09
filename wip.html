@@ -23,7 +23,7 @@ Reason: <output id="deets"></output>
             const url = new URL(document.URL)
             const params = url.searchParams
             const deetlist = {update:"This page is being updated. Please wait.", dev:"This page is being developed. Please wait.", tran:"This page is being transferred from my other computer. Please wait."}
-            if (deetlist.hasOwnProperty("reason")) {
+            if (deetlist.hasOwnProperty(params.get("reason"))) {
                 document.getElementById("deets").textContent = deetlist[params.get("reason")]
             } else {
                 document.getElementById("deets").textContent = params.get("reason")
