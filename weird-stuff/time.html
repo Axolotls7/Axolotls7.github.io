@@ -4,8 +4,30 @@
 		<link rel="stylesheet" href="../style.css">
 	</head>
 	<body>
-		<h1>A stupid time format that I made</h1>
+		<h1>A <s>stupid</s><ins>sci-fi</ins> time format that I made</h1>
 		<p>So I wanted a way to format time for sci-fi stuff. So I made this:</p>
-		<label for="y">Year: </label><input type="number" id="y">
+		<label for="y">Year: </label><input type="number" id="y" step="1"><br>
+		<label for="m">Month: </label><select id="m">
+			<option value="1">January</option>
+			<option value="2">February</option>
+			<option value="3">March</option>
+			<option value="4">April</option>
+			<option value="5">May</option>
+			<option value="6">June</option>
+			<option value="7">July</option>
+			<option value="8">August</option>
+			<option value="9">September</option>
+			<option value="10">October</option>
+			<option value="11">November</option>
+			<option value="12">December</option>
+		</select><br>
+		<label for="d">Day (not verified to exist): </label><input type="number" id="d" min="1" max="31"><br>
+		<button oninput="calcFormat()">Do the thingy</button>
+		<output id="formattedTime">MC/DY.M.d</output>
+		<script>
+			function calcFormat() {
+				Document.getElementById("formattedTime").textContent = `${(parseInt(Document.getElementById("y").value.toString().padStart(4,"0")) + 100).toString().slice(0,2)}/${(parseInt(Document.getElementById("y").value.toString().padStart(4,"0")) + 100).toString().slice(2)}.${Document.getElementById("m").value}.${Document.getElementById("d").value}`;
+			}
+		</script>
 	</body>
 </html>
