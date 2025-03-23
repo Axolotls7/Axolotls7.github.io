@@ -26,7 +26,7 @@
 		<output id="formattedTime">MC/DY.M.d</output>
 		<script>
 			function calcFormat() {
-				Document.getElementById("formattedTime").textContent = `${(parseInt(Document.getElementById("y").value.toString().padStart(4,"0")) + 100).toString().slice(0,2)}/${(parseInt(Document.getElementById("y").value.toString().padStart(4,"0")) + 100).toString().slice(2)}.${Document.getElementById("m").value}.${Document.getElementById("d").value}`;
+				document.getElementById("formattedTime").textContent = `${(parseInt(document.getElementById("y").value.toString().padStart(4,"0")) + 100).toString().slice(0,2)}/${(parseInt(document.getElementById("y").value.toString().padStart(4,"0")) + 100).toString().slice(2)}.${document.getElementById("m").value}.${document.getElementById("d").value}`;
 			}
 		</script>
 	</body>
