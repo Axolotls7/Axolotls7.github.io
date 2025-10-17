@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
 h1 {text-align: center}
 body {background-color: ghostwhite; color: darkslategray}
 a:link, a:visited {display: inline; color: slategray;}
@@ -7,4 +8,7 @@ div {
   padding: 0 50px 0 20px;
   border-radius: 10px 30px 30px 10px;
   float: left;
+}
+pre, p {
+  font-family: "Share Tech Mono", monospace;
 }
