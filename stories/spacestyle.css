@@ -1,0 +1,10 @@
+h1 {text-align: center}
+body {background-color: ghostwhite; color: darkslategray}
+a:link, a:visited {display: inline; color: slategray;}
+a:hover {color: #318ce7}
+div {
+  background: ivory;
+  padding: 0 50px 0 20px;
+  border-radius: 10px 30px 30px 10px;
+  float: left;
+}
